@@ -274,4 +274,92 @@
 # else:
 #     print('家で食べましょう')
 
+#while文
+#羊を数えるのを3回繰り返す
+# count = 0
+# while count < 3:
+#     count += 1
+#     print('羊が{}匹'.format(count))
+# print('おやすみなさい')
+
+#羊を数えるのを眠るまで繰り返す
+# is_awake = True
+# count = 0
+#
+# while is_awake == True:
+#     count += 1
+#     print('羊が{}匹・・・'.format(count))
+#     key = input('もう眠りそうですか？(y/n)>>')
+#     if key == 'y':
+#         is_awake = False
+# print('おやすみなさい')
+
+#繰り返しを使って得点リストを作成する
+# count = 0 #カウンタ変数
+# student_num = int(input('学生の数を入力'))#学生の数
+# score_list = list()#得点リスト
+#
+# while count < student_num:
+#     count += 1
+#     score = int(input('{}人目の試験の得点を入力>>'.format(count)))
+#     score_list.append(score)
+#
+# print(score_list)
+# total = sum(score_list)
+# print('平均点は{}点です'.format(total / student_num))
+
+#リストの全要素を繰り返し参照する
+# scores = [80,20,75,60]
+# count = 0
+#
+# while count < len(scores):
+#     if scores[count] >= 60:
+#         print('合格')
+#     else:
+#         print('不合格')
+#     count += 1
+
+#for分で決まった回数を繰り返す
+# for num in range(3):
+#     print('ホゲホゲ')
+
+#データのまとまりからサンプルを抽出
+# ages = [28,50,8,20,78,25,22,10,27,33] #対照データ
+# num = 5
+# samples = list()
+#
+# for age in ages:
+#     if 20 <= age < 30:
+#         if len(samples) < num:
+#             samples.append(age)
+# print(samples)
+
+#目的数に達したら繰り返しを終了する
+# ages = [28,50,8,20,78,25,22,10,27,33]#対象データ
+# num = 5#目標の抽出数
+# samples = list()#サンプルデータを格納するリスト
+#
+# for data in ages:
+#     if 20 <= data < 30:
+#         samples.append(data)
+#         if len(samples) == num:
+#             break
+# print(samples)
+
+#不要なかいのループをスキップする
+ages = [28,50,'秘密',20,78,25,22,10,'無回答',33]
+samples = list()
+for data in ages:
+    if not isinstance(data,int):
+        continue
+    if data < 20 or data >= 30:
+        continue
+    samples.append(data)
+print(samples)
+
+
+
+
+
+
 
