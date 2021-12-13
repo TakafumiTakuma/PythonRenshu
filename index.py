@@ -347,17 +347,127 @@
 # print(samples)
 
 #不要なかいのループをスキップする
-ages = [28,50,'秘密',20,78,25,22,10,'無回答',33]
-samples = list()
-for data in ages:
-    if not isinstance(data,int):
-        continue
-    if data < 20 or data >= 30:
-        continue
-    samples.append(data)
-print(samples)
+# ages = [28,50,'秘密',20,78,25,22,10,'無回答',33]
+# samples = list()
+# for data in ages:
+#     if not isinstance(data,int):
+#         continue
+#     if data < 20 or data >= 30:
+#         continue
+#     samples.append(data)
+# print(samples)
+
+#hello関数の定義
+# def hello():
+#     print('こんにちは')
+#
+# hello()
+
+#引数を受け取りhello関数を呼び出す
+# def hello(name):
+#     print('こんにちは。{}です。'.format(name))
+#
+# hello('ホゲホゲ')
+
+#複数の引数を引き受けるprofile関数
+# def profile(name,age,hobby):
+#     print('私の名前は{}です。'.format(name))
+#     print('年齢は{}歳です。'.format(age))
+#     print('趣味は{}です。'.format(hobby))
+#
+# profile('浅木',23,'カフェ巡り')
+
+#足し算の結果を返す
+# def plus(x,y):
+#     answer = x + y
+#     return answer
+#
+# resurt = plus(100,50)
+# print('足し算の答えは{}です'.format(resurt))
 
 
+#さまざまな機能を担当する関数の定義
+# def input_scores(name):#得点入力を担当する関数
+#     print('{}さんの試験結果を入力してください'.format(name))
+#     network = int(input('ネットワークの得点? >>'))
+#     database = int(input('データベースの得点? >>'))
+#     security = int(input('セキュリティの得点? >>'))
+#
+#     scores = [network,database,security]
+#
+#     return scores
+#
+# def calc_average(scores):#平均の計算を担当する関数
+#     avg = sum(scores) / len(scores)
+#
+#     return avg
+#
+# def output_result(name,avg):#平均点の出力を担当する関数
+#     print('{}さんの平均点は{}です'.format(name,avg))
+#
+# #得点入力
+# hitorime_scores = input_scores('生徒A')
+# hutarime_scores = input_scores('生徒B')
+#
+# #平均点を計算
+# hitorime_avg = calc_average(hitorime_scores)
+# hutarime_avg = calc_average(hutarime_scores)
+#
+# #結果を出力
+# output_result('生徒A',hitorime_avg)
+# output_result('生徒B',hutarime_avg)
+
+#２つの戻り値を返すし、戻り値のタプルをアンバック代入
+# def plus_and_minus(a,b):
+#
+#     return a + b,a - b
+#
+# (next,prev) = plus_and_minus(1978,1)
+#
+# print((next,prev))
+
+#eat関数(デフォルト値を利用)
+# def eat(breakfast, lunch, dinner='カレー'):
+#     print('朝は{}を食べました'.format(breakfast))
+#     print('昼は{}を食べました'.format(lunch))
+#     print('晩は{}を食べました'.format(dinner))
+#
+# print('本日の食事は下記の通りです')
+#
+# eat('パン','焼きそば')
+
+#可変長引数を利用した関数定義
+# def eat(breakfast,lunch,dinner='カレー', *desserts):
+#     print('朝は{}を食べました'.format(breakfast))
+#     print('昼は{}を食べました'.format(lunch))
+#     print('晩は{}を食べました'.format(dinner))
+#
+#     for d in desserts:
+#         print('おやつに{}を食べました'.format(d))
+#
+# eat('トースト','パスタ','カレー','アイス','チーズケーキ','プリン')
+
+#ディクショナリを用いた可変長引数
+# def eat(**kwargs):
+#     for key in kwargs:
+#         print('{}に{}を食べました'.format(key,kwargs[key]))
+#
+# eat(朝食='納豆')
+
+#global文を用いてグローバル変数を代入する
+name = 'ホゲホゲ'
+
+def change_name():
+    global name
+    name = 'ゲホゲホ'
+
+
+def hello():
+    print('こんにちは' + name + 'さん')
+
+change_name()
+
+hello()
 
 
 
